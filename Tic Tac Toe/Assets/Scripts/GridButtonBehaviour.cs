@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GridButtonBehaviour : MonoBehaviour {
 
     private Button button;
+    private RectTransform gridSquare;
 
 	// Use this for initialization
 	void Start () {
@@ -22,8 +23,15 @@ public class GridButtonBehaviour : MonoBehaviour {
     private void OnButtonClick()
     {
         Debug.Log(this.name + " has been clicked");
+        //gridSquare.gameObject.GetComponent<Image>().color = Color.red;
+        gridSquare.GetComponent<GridSquareBehaviour>().SetImage();
         button.gameObject.SetActive(false);
         
+    }
+
+    public void subGridSquare(RectTransform rt)
+    {
+        this.gridSquare = rt;
     }
 
 

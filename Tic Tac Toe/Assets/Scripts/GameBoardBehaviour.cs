@@ -63,7 +63,9 @@ public class GameBoardBehaviour : MonoBehaviour {
             buttonArray[i].image.rectTransform.sizeDelta = new Vector2(size, size);
             buttonArray[i].transform.SetParent(gameObject.transform);
             buttonArray[i].transform.localScale = gameObject.transform.localScale;
-            buttonArray[i].gameObject.transform.localPosition = new Vector3(spacingX, spacingY, 0); 
+            buttonArray[i].gameObject.transform.localPosition = new Vector3(spacingX, spacingY, 0);
+            buttonArray[i].gameObject.GetComponent<GridButtonBehaviour>().subGridSquare(gridArray[i]);
+
         }
         
 

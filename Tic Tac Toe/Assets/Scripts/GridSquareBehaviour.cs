@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class GridSquareBehaviour : MonoBehaviour {
 
-    private Button button;
+    Image img;
+    GameManagerBehaviour gm;
+
     // Use this for initialization
     void Start () {
-
+        img = GetComponent<Image>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
     }
 	
 	// Update is called once per frame
@@ -18,11 +21,10 @@ public class GridSquareBehaviour : MonoBehaviour {
 
     public void SetImage()
     {
-
+        Color tmp = gm.getCurPlayerColor();
+        img.color = tmp;
+        //img.color = new Color(144, 144, 144);
+        gm.GetComponent<GameManagerBehaviour>().testGameEnd();
     }
 
-    public void subScribeButton(Button bt)
-    {
-        button = bt;
-    }
 }
