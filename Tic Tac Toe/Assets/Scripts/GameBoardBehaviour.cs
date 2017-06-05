@@ -64,7 +64,7 @@ public class GameBoardBehaviour : MonoBehaviour {
             buttonArray[i].transform.SetParent(gameObject.transform);
             buttonArray[i].transform.localScale = gameObject.transform.localScale;
             buttonArray[i].gameObject.transform.localPosition = new Vector3(spacingX, spacingY, 0);
-            buttonArray[i].gameObject.GetComponent<GridButtonBehaviour>().subGridSquare(gridArray[i]);
+            buttonArray[i].gameObject.GetComponent<GridButtonBehaviour>().subGridSquare(gridArray[i].GetComponent<GridSquareBehaviour>());
 
         }
         

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,9 +19,8 @@ public class GameManagerBehaviour : MonoBehaviour {
         for (int i = 0; i < players.Length; i++)
         {
             players[i] = new PlayerBehaviour();
-            //nit player and their attributes
-            System.Random rand = new System.Random();
-            Color pc = new Color((float)rand.Next(255), (float)rand.Next(255), (float)rand.Next(255),255);
+            //init player and their attributes
+            Color pc = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f),1);
             players[i].setColor(pc);
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GridButtonBehaviour : MonoBehaviour {
 
     private Button button;
-    private RectTransform gridSquare;
+    private GridSquareBehaviour gridSquare;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +29,7 @@ public class GridButtonBehaviour : MonoBehaviour {
         
     }
 
-    public void subGridSquare(RectTransform rt)
+    public void subGridSquare(GridSquareBehaviour rt)
     {
         this.gridSquare = rt;
     }
